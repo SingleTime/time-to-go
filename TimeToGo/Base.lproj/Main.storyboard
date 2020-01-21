@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfx-qk-tY7">
+                                <rect key="frame" x="161" y="566" width="133" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="jWY-a0-IWq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Add"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EM-3a-wuT">
+                                <rect key="frame" x="20" y="318" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="g9d-1w-mil"/>
+                                    <constraint firstAttribute="height" constant="59" id="uHc-8J-DSk"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="where_to_vote_24px_rounded"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-jA-Txz">
+                                <rect key="frame" x="20" y="154" width="47" height="47"/>
+                                <state key="normal" backgroundImage="time"/>
+                            </button>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-2k-0Ov">
+                                <rect key="frame" x="82" y="433" width="291" height="31"/>
+                                <segments>
+                                    <segment title="开车"/>
+                                    <segment title="打车"/>
+                                    <segment title="公共交通"/>
+                                    <segment title="步行"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="28" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hNP-FW-bbr" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="100" y="326.5" width="32" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="28" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dYF-dL-TCh" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="100" y="160" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ay-O6-Xcm">
+                                <rect key="frame" x="0.0" y="671" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6EM-3a-wuT" firstAttribute="centerY" secondItem="hNP-FW-bbr" secondAttribute="centerY" id="33c-JG-Uh1"/>
+                            <constraint firstItem="lJc-2k-0Ov" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6yD-OZ-CAK"/>
+                            <constraint firstItem="lJc-2k-0Ov" firstAttribute="top" secondItem="6EM-3a-wuT" secondAttribute="bottom" constant="60" id="9HH-GF-fmt"/>
+                            <constraint firstItem="6EM-3a-wuT" firstAttribute="top" secondItem="zdN-jA-Txz" secondAttribute="bottom" constant="92" id="BU2-Kq-K7b"/>
+                            <constraint firstItem="dfx-qk-tY7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161" id="Klw-fm-Bfq"/>
+                            <constraint firstItem="zdN-jA-Txz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="UkT-L2-vWu"/>
+                            <constraint firstItem="lJc-2k-0Ov" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X9D-cy-en7"/>
+                            <constraint firstItem="6EM-3a-wuT" firstAttribute="trailing" secondItem="zdN-jA-Txz" secondAttribute="trailing" id="bYu-NJ-RWe"/>
+                            <constraint firstItem="6EM-3a-wuT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="314" id="e8d-vi-ik9"/>
+                            <constraint firstItem="hNP-FW-bbr" firstAttribute="leading" secondItem="6EM-3a-wuT" secondAttribute="trailing" constant="8" id="eRv-Yu-fwN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dfx-qk-tY7" secondAttribute="trailing" constant="120" id="fI2-31-gEn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lJc-2k-0Ov" secondAttribute="trailing" id="gOk-a5-8sQ"/>
+                            <constraint firstItem="6EM-3a-wuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hFa-sx-LcT"/>
+                            <constraint firstItem="lJc-2k-0Ov" firstAttribute="centerX" secondItem="dfx-qk-tY7" secondAttribute="centerX" id="wGq-hZ-m3F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dfx-qk-tY7" secondAttribute="bottom" constant="186" id="x0i-Zj-xYj"/>
+                            <constraint firstItem="6EM-3a-wuT" firstAttribute="leading" secondItem="zdN-jA-Txz" secondAttribute="leading" id="ykW-oA-ITS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="dfx-qk-tY7" id="RsP-G4-jmw"/>
+                        <outlet property="location" destination="hNP-FW-bbr" id="M7e-wp-ttN"/>
+                        <outlet property="timeField" destination="dYF-dL-TCh" id="Z6f-yF-L7w"/>
+                        <outlet property="timeSelector" destination="2Ay-O6-Xcm" id="sRE-m0-Fwh"/>
+                        <outlet property="travelType" destination="lJc-2k-0Ov" id="sf8-9r-rMR"/>
+                        <outlet property="typpe" destination="lJc-2k-0Ov" id="uWm-Iu-nVG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add" width="200" height="200"/>
+        <image name="time" width="200" height="200"/>
+        <image name="where_to_vote_24px_rounded" width="200" height="200"/>
+    </resources>
 </document>

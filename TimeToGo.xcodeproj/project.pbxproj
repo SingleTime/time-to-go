@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2A24D094B5AA74C6BEA9EF /* Pods_TimeToGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D7DDD8D52031A8056BBB14 /* Pods_TimeToGo.framework */; };
 		F4A8247623AA3111002EE5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8247523AA3111002EE5CB /* AppDelegate.swift */; };
 		F4A8247823AA3111002EE5CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8247723AA3111002EE5CB /* SceneDelegate.swift */; };
 		F4A8247A23AA3111002EE5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8247923AA3111002EE5CB /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		454E0DF7D695EB3BA98A7048 /* Pods-TimeToGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToGo.release.xcconfig"; path = "Target Support Files/Pods-TimeToGo/Pods-TimeToGo.release.xcconfig"; sourceTree = "<group>"; };
+		BD8EE22AB18F4353D0931A03 /* Pods-TimeToGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeToGo.debug.xcconfig"; path = "Target Support Files/Pods-TimeToGo/Pods-TimeToGo.debug.xcconfig"; sourceTree = "<group>"; };
 		F4A8247223AA3111002EE5CB /* TimeToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A8247523AA3111002EE5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4A8247723AA3111002EE5CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		F4A8248123AA3113002EE5CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A8248423AA3113002EE5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4A8248623AA3113002EE5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D7DDD8D52031A8056BBB14 /* Pods_TimeToGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeToGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2A24D094B5AA74C6BEA9EF /* Pods_TimeToGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C02CC805D6ABABE2EE26263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9D7DDD8D52031A8056BBB14 /* Pods_TimeToGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA74B2B41F0FE88683CA6F67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD8EE22AB18F4353D0931A03 /* Pods-TimeToGo.debug.xcconfig */,
+				454E0DF7D695EB3BA98A7048 /* Pods-TimeToGo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F4A8246923AA3111002EE5CB = {
 			isa = PBXGroup;
 			children = (
 				F4A8247423AA3111002EE5CB /* TimeToGo */,
 				F4A8247323AA3111002EE5CB /* Products */,
+				BA74B2B41F0FE88683CA6F67 /* Pods */,
+				7C02CC805D6ABABE2EE26263 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4A8248923AA3113002EE5CB /* Build configuration list for PBXNativeTarget "TimeToGo" */;
 			buildPhases = (
+				21E76FEAEA257C0AF1F52AA6 /* [CP] Check Pods Manifest.lock */,
 				F4A8246E23AA3111002EE5CB /* Sources */,
 				F4A8246F23AA3111002EE5CB /* Frameworks */,
 				F4A8247023AA3111002EE5CB /* Resources */,
+				9805CFAA72B41909ED793447 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21E76FEAEA257C0AF1F52AA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeToGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9805CFAA72B41909ED793447 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeToGo/Pods-TimeToGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeToGo/Pods-TimeToGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeToGo/Pods-TimeToGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4A8246E23AA3111002EE5CB /* Sources */ = {
@@ -286,8 +354,10 @@
 		};
 		F4A8248A23AA3113002EE5CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD8EE22AB18F4353D0931A03 /* Pods-TimeToGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HZSZXLK49;
 				INFOPLIST_FILE = TimeToGo/Info.plist;
@@ -297,6 +367,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuck.TimeToGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,8 +375,10 @@
 		};
 		F4A8248B23AA3113002EE5CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454E0DF7D695EB3BA98A7048 /* Pods-TimeToGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HZSZXLK49;
 				INFOPLIST_FILE = TimeToGo/Info.plist;
@@ -315,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuck.TimeToGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
