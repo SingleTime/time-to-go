@@ -9,7 +9,7 @@ jobs:
           destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X', 'platform=tvOS Simulator,OS=12.2,name=Apple TV 4K']
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@dev
       - name: Build and test
         run: |
           xcodebuild clean test -project TimeToGo.xcodeproj -scheme TimeToGo -destination "${destination}" CODE_SIGN_IDENTITY="9YZB6JT527" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
